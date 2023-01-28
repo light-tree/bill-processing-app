@@ -391,3 +391,13 @@ FodyWeavers.xsd
 BillProcessingApp/obj/BillProcessingApp.csproj.nuget.dgspec.json
 
 BillProcessingApp/obj/project.nuget.cache
+
+BillProcessingApp/obj/project.assets.json
+
+BillProcessingApp/obj/BillProcessingApp.csproj.nuget.g.props
+
+BillProcessingApp/obj/Debug/net5.0-windows/BillProcessingApp.assets.cache
+
+BillProcessingApp/obj/Debug/net5.0-windows/BillProcessingApp.designer.runtimeconfig.json
+
+BillProcessingApp/obj/Debug/net5.0-windows/BillProcessingApp.GeneratedMSBuildEditorConfig.editorconfig
