@@ -388,3 +388,6 @@ FodyWeavers.xsd
 *.sln.iml
 
 # End of https://mrkandreev.name/snippets/gitignore-generator/#VisualStudio
+BillProcessingApp/obj/BillProcessingApp.csproj.nuget.dgspec.json
+
+BillProcessingApp/obj/project.nuget.cache
