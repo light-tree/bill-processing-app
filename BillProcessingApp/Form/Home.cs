@@ -16,6 +16,28 @@ namespace Home
         public Home()
         {
             InitializeComponent();
+
+            updateColumn();
+        }
+
+        private void updateColumn()
+        {
+            createdDate.Width = (int)(dgvInvoiceList.Width * 0.2) - 1;
+            importedDate.Width = (int)(dgvInvoiceList.Width * 0.2) - 1;
+            invoiceNo.Width = (int)(dgvInvoiceList.Width * 0.2) - 1;
+
+            invoiceCode.Width = (int)(dgvInvoiceList.Width * 0.1) - 1;
+            invoiceSymbol.Width = (int)(dgvInvoiceList.Width * 0.1) - 1;
+            currency.Width = (int)(dgvInvoiceList.Width * 0.1) - 1;
+            payment.Width = (
+                dgvInvoiceList.Width - 
+                createdDate.Width - 
+                importedDate.Width - 
+                invoiceNo.Width -
+                invoiceCode.Width -
+                invoiceSymbol.Width -
+                currency.Width
+                ) - 3;
         }
 
         private void Home_SizeChanged(object sender, EventArgs e)
@@ -68,6 +90,8 @@ namespace Home
                 panel5.Margin = new Padding(3, 3, 3, 3);
                 panel6.Margin = new Padding(3, 3, 3, 3);
             }
+
+            updateColumn();
         }
     }
 }

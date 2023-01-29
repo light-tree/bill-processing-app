@@ -36,36 +36,42 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxCreatedDate = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpCreatedDateTo = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpCreatedDateFrom = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxImportedDate = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dtpImportedDateTo = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.dtpImportedDateFrom = new System.Windows.Forms.DateTimePicker();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxInvoiceNo = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxInvoiceSymbol = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxInvoiceCode = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxPayment = new System.Windows.Forms.ComboBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCurrency = new System.Windows.Forms.ComboBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
+            this.buttonFilter = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.dgvInvoiceList = new System.Windows.Forms.DataGridView();
+            this.createdDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.importedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoiceCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoiceSymbol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoiceNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.currency = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -81,7 +87,7 @@
             this.groupBox6.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInvoiceList)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -190,11 +196,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.checkBoxCreatedDate);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.dtpCreatedDateTo);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dtpCreatedDateFrom);
             this.groupBox1.Location = new System.Drawing.Point(13, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(355, 55);
@@ -202,14 +208,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Created date";
             // 
-            // checkBox1
+            // checkBoxCreatedDate
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(8, 30);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(18, 17);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxCreatedDate.AutoSize = true;
+            this.checkBoxCreatedDate.Location = new System.Drawing.Point(8, 30);
+            this.checkBoxCreatedDate.Name = "checkBoxCreatedDate";
+            this.checkBoxCreatedDate.Size = new System.Drawing.Size(18, 17);
+            this.checkBoxCreatedDate.TabIndex = 4;
+            this.checkBoxCreatedDate.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -220,13 +226,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "To";
             // 
-            // dateTimePicker2
+            // dtpCreatedDateTo
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(236, 22);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(109, 27);
-            this.dateTimePicker2.TabIndex = 3;
+            this.dtpCreatedDateTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpCreatedDateTo.Location = new System.Drawing.Point(236, 22);
+            this.dtpCreatedDateTo.Name = "dtpCreatedDateTo";
+            this.dtpCreatedDateTo.Size = new System.Drawing.Size(109, 27);
+            this.dtpCreatedDateTo.TabIndex = 3;
             // 
             // label1
             // 
@@ -237,21 +243,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "From";
             // 
-            // dateTimePicker1
+            // dtpCreatedDateFrom
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(81, 22);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(109, 27);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dtpCreatedDateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpCreatedDateFrom.Location = new System.Drawing.Point(81, 22);
+            this.dtpCreatedDateFrom.Name = "dtpCreatedDateFrom";
+            this.dtpCreatedDateFrom.Size = new System.Drawing.Size(109, 27);
+            this.dtpCreatedDateFrom.TabIndex = 1;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.checkBox2);
+            this.groupBox2.Controls.Add(this.checkBoxImportedDate);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.dateTimePicker3);
+            this.groupBox2.Controls.Add(this.dtpImportedDateTo);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.dateTimePicker4);
+            this.groupBox2.Controls.Add(this.dtpImportedDateFrom);
             this.groupBox2.Location = new System.Drawing.Point(13, 64);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(355, 55);
@@ -259,14 +265,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Imported date";
             // 
-            // checkBox2
+            // checkBoxImportedDate
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(8, 30);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(18, 17);
-            this.checkBox2.TabIndex = 4;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxImportedDate.AutoSize = true;
+            this.checkBoxImportedDate.Location = new System.Drawing.Point(8, 30);
+            this.checkBoxImportedDate.Name = "checkBoxImportedDate";
+            this.checkBoxImportedDate.Size = new System.Drawing.Size(18, 17);
+            this.checkBoxImportedDate.TabIndex = 4;
+            this.checkBoxImportedDate.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -277,13 +283,13 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "To";
             // 
-            // dateTimePicker3
+            // dtpImportedDateTo
             // 
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(236, 22);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(109, 27);
-            this.dateTimePicker3.TabIndex = 3;
+            this.dtpImportedDateTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpImportedDateTo.Location = new System.Drawing.Point(236, 22);
+            this.dtpImportedDateTo.Name = "dtpImportedDateTo";
+            this.dtpImportedDateTo.Size = new System.Drawing.Size(109, 27);
+            this.dtpImportedDateTo.TabIndex = 3;
             // 
             // label4
             // 
@@ -294,13 +300,13 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "From";
             // 
-            // dateTimePicker4
+            // dtpImportedDateFrom
             // 
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker4.Location = new System.Drawing.Point(81, 22);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(109, 27);
-            this.dateTimePicker4.TabIndex = 1;
+            this.dtpImportedDateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpImportedDateFrom.Location = new System.Drawing.Point(81, 22);
+            this.dtpImportedDateFrom.Name = "dtpImportedDateFrom";
+            this.dtpImportedDateFrom.Size = new System.Drawing.Size(109, 27);
+            this.dtpImportedDateFrom.TabIndex = 1;
             // 
             // panel4
             // 
@@ -313,7 +319,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.textBoxInvoiceNo);
             this.groupBox3.Location = new System.Drawing.Point(3, 0);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(127, 55);
@@ -321,16 +327,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Invoice no";
             // 
-            // textBox1
+            // textBoxInvoiceNo
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(115, 27);
-            this.textBox1.TabIndex = 0;
+            this.textBoxInvoiceNo.Location = new System.Drawing.Point(6, 22);
+            this.textBoxInvoiceNo.Name = "textBoxInvoiceNo";
+            this.textBoxInvoiceNo.Size = new System.Drawing.Size(115, 27);
+            this.textBoxInvoiceNo.TabIndex = 0;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox2);
+            this.groupBox4.Controls.Add(this.textBoxInvoiceSymbol);
             this.groupBox4.Location = new System.Drawing.Point(138, 0);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(127, 55);
@@ -338,12 +344,12 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Invoice symbol";
             // 
-            // textBox2
+            // textBoxInvoiceSymbol
             // 
-            this.textBox2.Location = new System.Drawing.Point(6, 22);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(115, 27);
-            this.textBox2.TabIndex = 0;
+            this.textBoxInvoiceSymbol.Location = new System.Drawing.Point(6, 22);
+            this.textBoxInvoiceSymbol.Name = "textBoxInvoiceSymbol";
+            this.textBoxInvoiceSymbol.Size = new System.Drawing.Size(115, 27);
+            this.textBoxInvoiceSymbol.TabIndex = 0;
             // 
             // panel3
             // 
@@ -355,7 +361,7 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox3);
+            this.groupBox5.Controls.Add(this.textBoxInvoiceCode);
             this.groupBox5.Location = new System.Drawing.Point(3, 0);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(262, 55);
@@ -363,12 +369,12 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Invoice code";
             // 
-            // textBox3
+            // textBoxInvoiceCode
             // 
-            this.textBox3.Location = new System.Drawing.Point(6, 22);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(250, 27);
-            this.textBox3.TabIndex = 0;
+            this.textBoxInvoiceCode.Location = new System.Drawing.Point(6, 22);
+            this.textBoxInvoiceCode.Name = "textBoxInvoiceCode";
+            this.textBoxInvoiceCode.Size = new System.Drawing.Size(250, 27);
+            this.textBoxInvoiceCode.TabIndex = 0;
             // 
             // panel5
             // 
@@ -381,7 +387,7 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.comboBox1);
+            this.groupBox7.Controls.Add(this.comboBoxPayment);
             this.groupBox7.Location = new System.Drawing.Point(136, 0);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(127, 55);
@@ -389,17 +395,17 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Payment";
             // 
-            // comboBox1
+            // comboBoxPayment
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 21);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(115, 28);
-            this.comboBox1.TabIndex = 4;
+            this.comboBoxPayment.FormattingEnabled = true;
+            this.comboBoxPayment.Location = new System.Drawing.Point(6, 21);
+            this.comboBoxPayment.Name = "comboBoxPayment";
+            this.comboBoxPayment.Size = new System.Drawing.Size(115, 28);
+            this.comboBoxPayment.TabIndex = 4;
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.comboBox2);
+            this.groupBox6.Controls.Add(this.comboBoxCurrency);
             this.groupBox6.Location = new System.Drawing.Point(3, 0);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(127, 55);
@@ -407,69 +413,135 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Currency";
             // 
-            // comboBox2
+            // comboBoxCurrency
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(6, 22);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(115, 28);
-            this.comboBox2.TabIndex = 5;
+            this.comboBoxCurrency.FormattingEnabled = true;
+            this.comboBoxCurrency.Location = new System.Drawing.Point(6, 22);
+            this.comboBoxCurrency.Name = "comboBoxCurrency";
+            this.comboBoxCurrency.Size = new System.Drawing.Size(115, 28);
+            this.comboBoxCurrency.TabIndex = 5;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.button2);
-            this.panel6.Controls.Add(this.button1);
+            this.panel6.Controls.Add(this.buttonClear);
+            this.panel6.Controls.Add(this.buttonFilter);
             this.panel6.Location = new System.Drawing.Point(651, 64);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(275, 55);
             this.panel6.TabIndex = 9;
             // 
-            // button2
+            // buttonClear
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            this.button2.Location = new System.Drawing.Point(147, 11);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 36);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonClear.BackColor = System.Drawing.Color.White;
+            this.buttonClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.buttonClear.Location = new System.Drawing.Point(147, 11);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(100, 36);
+            this.buttonClear.TabIndex = 5;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // buttonFilter
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(204)))));
-            this.button1.Location = new System.Drawing.Point(24, 11);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 36);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Filter";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonFilter.BackColor = System.Drawing.Color.White;
+            this.buttonFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(204)))));
+            this.buttonFilter.Location = new System.Drawing.Point(24, 11);
+            this.buttonFilter.Name = "buttonFilter";
+            this.buttonFilter.Size = new System.Drawing.Size(100, 36);
+            this.buttonFilter.TabIndex = 4;
+            this.buttonFilter.Text = "Filter";
+            this.buttonFilter.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dgvInvoiceList);
             this.panel2.Location = new System.Drawing.Point(3, 133);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(936, 260);
             this.panel2.TabIndex = 1;
             // 
-            // dataGridView1
+            // dgvInvoiceList
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvInvoiceList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(917, 247);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvInvoiceList.BackgroundColor = System.Drawing.Color.White;
+            this.dgvInvoiceList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInvoiceList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.createdDate,
+            this.importedDate,
+            this.invoiceCode,
+            this.invoiceSymbol,
+            this.invoiceNo,
+            this.currency,
+            this.payment});
+            this.dgvInvoiceList.Location = new System.Drawing.Point(9, 3);
+            this.dgvInvoiceList.Name = "dgvInvoiceList";
+            this.dgvInvoiceList.RowHeadersVisible = false;
+            this.dgvInvoiceList.RowHeadersWidth = 51;
+            this.dgvInvoiceList.RowTemplate.Height = 29;
+            this.dgvInvoiceList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvInvoiceList.Size = new System.Drawing.Size(917, 247);
+            this.dgvInvoiceList.TabIndex = 0;
+            // 
+            // createdDate
+            // 
+            this.createdDate.HeaderText = "Created date";
+            this.createdDate.MinimumWidth = 6;
+            this.createdDate.Name = "createdDate";
+            this.createdDate.ReadOnly = true;
+            this.createdDate.Width = 124;
+            // 
+            // importedDate
+            // 
+            this.importedDate.HeaderText = "Imported date";
+            this.importedDate.MinimumWidth = 6;
+            this.importedDate.Name = "importedDate";
+            this.importedDate.ReadOnly = true;
+            this.importedDate.Width = 122;
+            // 
+            // invoiceCode
+            // 
+            this.invoiceCode.HeaderText = "Invoice code";
+            this.invoiceCode.MinimumWidth = 6;
+            this.invoiceCode.Name = "invoiceCode";
+            this.invoiceCode.ReadOnly = true;
+            this.invoiceCode.Width = 125;
+            // 
+            // invoiceSymbol
+            // 
+            this.invoiceSymbol.HeaderText = "Invoice symbol";
+            this.invoiceSymbol.MinimumWidth = 6;
+            this.invoiceSymbol.Name = "invoiceSymbol";
+            this.invoiceSymbol.ReadOnly = true;
+            this.invoiceSymbol.Width = 125;
+            // 
+            // invoiceNo
+            // 
+            this.invoiceNo.HeaderText = "Invoice no";
+            this.invoiceNo.MinimumWidth = 6;
+            this.invoiceNo.Name = "invoiceNo";
+            this.invoiceNo.ReadOnly = true;
+            this.invoiceNo.Width = 125;
+            // 
+            // currency
+            // 
+            this.currency.HeaderText = "Currency";
+            this.currency.MinimumWidth = 6;
+            this.currency.Name = "currency";
+            this.currency.ReadOnly = true;
+            this.currency.Width = 125;
+            // 
+            // payment
+            // 
+            this.payment.HeaderText = "Payment";
+            this.payment.MinimumWidth = 6;
+            this.payment.Name = "payment";
+            this.payment.ReadOnly = true;
+            this.payment.Width = 125;
             // 
             // Home
             // 
@@ -504,7 +576,7 @@
             this.groupBox6.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInvoiceList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -518,36 +590,42 @@
         private System.Windows.Forms.Label labelHome;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvInvoiceList;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxCreatedDate;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpCreatedDateTo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpCreatedDateFrom;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBoxImportedDate;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dtpImportedDateTo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DateTimePicker dtpImportedDateFrom;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxInvoiceNo;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxInvoiceSymbol;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxInvoiceCode;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxPayment;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxCurrency;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button buttonFilter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn createdDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn importedDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invoiceCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invoiceSymbol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invoiceNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn currency;
+        private System.Windows.Forms.DataGridViewTextBoxColumn payment;
     }
 }
