@@ -2,6 +2,7 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Compile Update="Form\Home.cs">
+    <Compile Update="Form\FrmInvoiceDetail.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
