@@ -4,11 +4,5 @@
     <Compile Update="Form\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form\ImportedInvoices.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Form\InvoiceDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>
