@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillProcessingApp", "BillProcessingApp\BillProcessingApp.csproj", "{8D67F4B4-FE13-4D30-BECA-C7091B4FE716}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BillProcessingApp", "BillProcessingApp\BillProcessingApp.csproj", "{8D67F4B4-FE13-4D30-BECA-C7091B4FE716}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation Layer", "Presentation Layer", "{49BC2380-3DC0-4450-A44C-86BAE78421B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Layer", "Data Layer", "{D21F3D92-592E-45C8-BB2B-BD1450EF4C71}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business Layer", "Business Layer", "{C600C0AA-CB18-4339-BF2C-BE223863437A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +24,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8D67F4B4-FE13-4D30-BECA-C7091B4FE716} = {49BC2380-3DC0-4450-A44C-86BAE78421B6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {771EC358-7ADE-4FB9-9CA3-8CDE26E08877}
