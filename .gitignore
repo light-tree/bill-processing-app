@@ -401,3 +401,5 @@ BillProcessingApp/obj/Debug/net5.0-windows/BillProcessingApp.assets.cache
 BillProcessingApp/obj/Debug/net5.0-windows/BillProcessingApp.designer.runtimeconfig.json
 
 BillProcessingApp/obj/Debug/net5.0-windows/BillProcessingApp.GeneratedMSBuildEditorConfig.editorconfig
+
+BillProcessingApp/obj/Debug/net5.0-windows/BillProcessingApp.csproj.AssemblyReference.cache
